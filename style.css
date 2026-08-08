@@ -657,3 +657,221 @@ body.cheat-flash{ animation: cheatFlash .3s ease-in-out 3; }
   .toggle-btn{ margin-left:0; }
   .msn-popup{ right:10px; left:10px; width:auto; bottom:10px; }
 }
+/* =========================================================
+   PROFILE WINDOW — FINAL LAYOUT FIX
+   ========================================================= */
+
+/* ให้หน้าต่าง Profile มีพื้นที่พอสำหรับสองฝั่ง */
+#window-profile {
+    min-width: 620px;
+}
+
+/* จัด Profile เป็น 2 คอลัมน์ */
+#window-profile .profile-layout {
+    display: grid !important;
+
+    grid-template-columns: 150px minmax(0, 1fr) !important;
+
+    gap: 18px !important;
+
+    align-items: start !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   LEFT — PHOTO
+   ========================================================= */
+
+#window-profile .profile-left {
+    width: 150px !important;
+
+    min-width: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* กรอบรูปเล็กลง */
+#window-profile .profile-left .photo-frame {
+    width: 140px !important;
+    height: 170px !important;
+
+    position: relative !important;
+
+    overflow: hidden !important;
+
+    padding: 0 !important;
+    margin: 0 auto 10px auto !important;
+
+    display: block !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* รูปเต็มกรอบ */
+#window-profile .profile-left .photo-frame #profile-img {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    max-width: none !important;
+    max-height: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+
+    display: block !important;
+
+    object-fit: cover !important;
+    object-position: center center !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ซ่อน placeholder */
+#window-profile .photo-placeholder,
+#window-profile .photo-frame > span,
+#window-profile .photo-frame > p {
+    display: none !important;
+}
+
+
+/* =========================================================
+   LEFT INFO
+   ========================================================= */
+
+#window-profile .visitor-line {
+    width: 100% !important;
+
+    margin: 7px 0 !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.35 !important;
+
+    overflow-wrap: anywhere !important;
+}
+
+
+/* =========================================================
+   RIGHT — INFORMATION
+   ========================================================= */
+
+#window-profile .profile-right {
+    min-width: 0 !important;
+
+    width: 100% !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* ข้อมูลไม่ให้ทะลุออกนอกหน้าต่าง */
+#window-profile .profile-info {
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    display: grid !important;
+
+    grid-template-columns: 95px minmax(0, 1fr) !important;
+
+    column-gap: 10px !important;
+
+    row-gap: 5px !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* หัวข้อ */
+#window-profile .profile-info dt {
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    font-size: 11px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1.4 !important;
+
+    overflow-wrap: anywhere !important;
+}
+
+
+/* ค่า */
+#window-profile .profile-info dd {
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.4 !important;
+
+    overflow-wrap: anywhere !important;
+
+    word-break: break-word !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #window-profile {
+        min-width: 0 !important;
+
+        width: 94vw !important;
+    }
+
+
+    #window-profile .profile-layout {
+        grid-template-columns: 110px minmax(0, 1fr) !important;
+
+        gap: 12px !important;
+    }
+
+
+    #window-profile .profile-left {
+        width: 110px !important;
+    }
+
+
+    #window-profile .profile-left .photo-frame {
+        width: 105px !important;
+        height: 135px !important;
+    }
+
+
+    #window-profile .profile-info {
+        grid-template-columns: 75px minmax(0, 1fr) !important;
+
+        column-gap: 6px !important;
+    }
+
+
+    #window-profile .profile-info dt,
+    #window-profile .profile-info dd {
+        font-size: 9px !important;
+    }
+
+                                            }
