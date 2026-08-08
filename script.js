@@ -11,12 +11,15 @@ const SITE_DATA = {
   fullName: "Lilkit Limjinda",
   age: "27",
   pronouns: "He/Him",
-  status: "??",
+  status: "No lock Love",
   mood: "Secure Mode",
   currentlyListening: "3OH!3",
   bio: "เป็นเรื่องปกติที่คนพบกันเพื่อจาก",
-  likes: "Sleep",
-  dislikes: "Wake up",
+  likes: "นอนหลับเต็มที่",
+  dislikes: "นอนน้อยจนถึงไม่พอ",
+  gender: "[Male]",
+  height: "[182]",
+  weight: "[70]",
 
   favoriteColor: "สีคราม , น้ำทะเลยามฝนตก , คลื่นและลม",
   favoriteFood: "อาหารขยะ Junk food อยู่ในช่วงพยายามกินคลีน",
@@ -25,7 +28,7 @@ const SITE_DATA = {
   currentObsession: "แล้วแต่ช่วงนั้น",
   randomFacts: "แล้วแต่ อะไรก็ได้",
   habits: "พูดน้อย เลือกจะพูดคนเดียวกับหัวไหล่ ใครว่าก็ดูเป็นมิตร แต่มักจะดูดุมากกว่าบ่อยครั้ง เพียงตาขีด ๆ ของเจ้าตัว",
-  otherTmi: "เดี๋ยวรู้กัน",
+  otherTmi: "Top Only / No lock Love",
 
   // Add or remove timeline entries freely.
   storyline: [
