@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✦ LUCK'S HOMEPAGE ✦ lilkit limjinda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mali:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================================================
+     CRT WRAPPER — everything lives inside this so the
+     scanline / glow overlay can sit on top of it all
+     ================================================ -->
+<div id="crt-wrapper" class="crt-on">
+
+  <!-- ============================================
+       PAGE 01 — START SCREEN
+       ============================================ -->
+  <section id="start-screen" class="page">
+    <div class="topline">
+      <span class="topline-item">＊ Air <span class="wink">☺</span></span>
+      <span class="topline-item">Train</span>
+    </div>
+
+    <div class="deco-field" aria-hidden="true">
+      <span class="deco heart" style="left:8%;top:20%;">♡</span>
+      <span class="deco star" style="left:85%;top:15%;">✦</span>
+      <span class="deco diamond" style="left:12%;top:65%;">◇</span>
+      <span class="deco dot" style="left:90%;top:55%;">•</span>
+      <span class="deco sparkle" style="left:75%;top:75%;">✧</span>
+      <span class="deco heart small" style="left:20%;top:85%;">♡</span>
+      <span class="deco star small" style="left:60%;top:8%;">★</span>
+      <span class="deco plus" style="left:5%;top:45%;">+</span>
+    </div>
+
+    <div class="retro-computer">
+      <div class="monitor">
+        <div class="monitor-screen">
+          <p class="screen-line big">Y2K</p>
+          <p class="screen-line">GAME</p>
+          <p class="screen-line">CONSOLE</p>
+          <p class="screen-line small">BACKGROUND</p>
+        </div>
+        <div class="monitor-vents">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="monitor-stand"></div>
+      <div class="monitor-base"></div>
+    </div>
+
+    <button id="press-start" class="press-start-btn">
+      <span class="cursor-icon">🖱️</span>
+      PRESS START!
+    </button>
+
+    <p class="hint-text">click to enter luck's world ♡</p>
+  </section>
+
+  <!-- ============================================
+       PAGE 02 — BOOT SCREEN
+       ============================================ -->
+  <section id="boot-screen" class="page hidden">
+    <div class="boot-box">
+      <p class="boot-title">LILKIT SYSTEM 200X</p>
+      <p class="boot-divider">--------------------------------</p>
+      <div id="boot-lines" class="boot-lines"></div>
+      <div class="boot-bar-track">
+        <div id="boot-bar-fill" class="boot-bar-fill"></div>
+      </div>
+      <p id="boot-percent" class="boot-percent">0%</p>
+      <p id="boot-status" class="boot-status hidden">
+        CONNECTION: ONLINE<br>
+        USER: LUCK<br>
+        STATUS: ONLINE <span class="dot-online">●</span>
+      </p>
+      <p id="boot-welcome" class="boot-welcome hidden"></p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PAGE 03 — MAIN WEBSITE
+       ============================================ -->
+  <section id="main-site" class="page hidden">
+
+    <!-- ============ TOP STATUS BAR ============ -->
+    <header class="status-bar">
+      <div class="status-left">
+        <span id="logo-click" class="logo">Y2K</span>
+        <span class="status-name">♡ LUCK / LILKIT LIMJINDA</span>
+      </div>
+      <div class="status-right">
+        <span class="status-chip">ONLINE <span class="dot-online">●</span></span>
+        <span id="battery-click" class="status-chip battery-chip">
+          <span class="battery-icon"><span id="battery-fill" class="battery-fill"></span></span>
+          <span id="battery-percent">76%</span>
+        </span>
+        <span id="clock" class="status-chip clock">--:--</span>
+      </div>
+    </header>
+
+    <div class="sysinfo-bar">
+      <span id="memory-click" class="sysinfo-item">MEMORY: 64 MB</span>
+      <span class="sysinfo-item">CONNECTION: ONLINE</span>
+      <span class="sysinfo-item">USER: LUCK</span>
+      <span class="sysinfo-item">Y2K MODE: ENABLED</span>
+      <span class="sysinfo-item">VISITOR: <span id="visitor-count">000000</span></span>
+      <span class="sysinfo-item">LAST LOGIN: TODAY</span>
+      <span class="sysinfo-icons">♡ ✦ ✉ ☁ ☆ ⌁</span>
+    </div>
+
+    <!-- ============ NAV ============ -->
+    <nav class="main-nav">
+      <button class="nav-btn" data-open="window-profile">♡ PROFILE</button>
+      <button class="nav-btn" data-open="window-storyline">★ STORYLINE</button>
+      <button class="nav-btn" data-open="window-tmi">♧ TMI</button>
+      <button class="nav-btn" data-open="window-warning">⚠ TW</button>
+      <button id="toggle-crt" class="toggle-btn">CRT: ON</button>
+      <button id="toggle-motion" class="toggle-btn">MOTION: ON</button>
+    </nav>
+
+    <!-- ============ DESKTOP AREA ============ -->
+    <main id="desktop" class="desktop">
+
+      <div class="desktop-deco" aria-hidden="true">
+        <span class="deco heart float" style="left:5%;top:10%;">♡</span>
+        <span class="deco star float" style="left:92%;top:8%;">✦</span>
+        <span class="deco diamond float" style="left:8%;top:80%;">◇</span>
+        <span class="deco sparkle float" style="left:88%;top:70%;">✧</span>
+        <span class="deco dot float" style="left:50%;top:5%;">•</span>
+        <span class="deco heart small float" style="left:70%;top:90%;">♡</span>
+        <span class="deco star small float" style="left:20%;top:40%;">★</span>
+      </div>
+
+      <!-- desktop icons -->
+      <div class="desktop-icons">
+        <button class="desktop-icon" data-open="window-profile">
+          <span class="icon-glyph">♡</span><span class="icon-label">PROFILE</span>
+        </button>
+        <button class="desktop-icon" data-open="window-mail">
+          <span class="icon-glyph">✉</span><span class="icon-label">MAIL</span>
+        </button>
+        <button class="desktop-icon" data-open="window-storyline">
+          <span class="icon-glyph">★</span><span class="icon-label">STORY</span>
+        </button>
+        <button class="desktop-icon" data-open="window-tmi">
+          <span class="icon-glyph">♧</span><span class="icon-label">TMI</span>
+        </button>
+        <button class="desktop-icon" data-open="window-warning">
+          <span class="icon-glyph">⚠</span><span class="icon-label">WARNING</span>
+        </button>
+      </div>
+
+      <!-- MSN status widget -->
+      <div class="msn-widget">
+        <p class="msn-name">♡ LUCK</p>
+        <p class="msn-status">● ONLINE</p>
+        <p class="msn-quote">"probably somewhere on the internet"</p>
+        <button id="send-message-btn" class="pixel-btn small">SEND MESSAGE</button>
+      </div>
+
+      <!-- Music Player -->
+      <div class="music-player">
+        <p class="mp-title">♫ LUCK'S PLAYER</p>
+        <p id="mp-status" class="mp-status">NO MEDIA INSERTED</p>
+        <div class="mp-track-row">
+          <span id="mp-time">00:00 / 00:00</span>
+        </div>
+        <div class="mp-bar-track"><div id="mp-bar-fill" class="mp-bar-fill"></div></div>
+        <div class="mp-controls">
+          <button id="mp-prev" class="pixel-btn tiny">◀</button>
+          <button id="mp-play" class="pixel-btn tiny">▶</button>
+          <button id="mp-stop" class="pixel-btn tiny">■</button>
+        </div>
+      </div>
+
+      <!-- ================= WINDOWS ================= -->
+
+      <!-- PROFILE.EXE -->
+      <div id="window-profile" class="win" data-title="PROFILE.EXE">
+        <div class="win-titlebar">
+          <span class="win-title">♡ PROFILE.EXE</span>
+          <div class="win-controls">
+            <button class="win-btn min">_</button>
+            <button class="win-btn max">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div class="profile-layout">
+            <div class="profile-left">
+              <div class="photo-frame">
+                <img src="assets/profile.jpg" alt="Luck's profile photo" id="profile-img"
+                     onerror="if(!this.dataset.triedPng){this.dataset.triedPng='1'; this.src='assets/profile.png';} else {this.style.display='none'; this.parentElement.classList.add('no-img');}">
+                <div class="photo-placeholder">
+                  <span>◇</span>
+                  <p>NO PHOTO<br>INSERTED</p>
+                </div>
+              </div>
+              <p class="visitor-line">VISITOR COUNT:<br><span id="visitor-count-2">000127</span></p>
+              <p class="visitor-line">LAST UPDATED:<br>200X.XX.XX</p>
+              <p class="visitor-line">STATUS: ONLINE <span class="dot-online">●</span></p>
+            </div>
+            <div class="profile-right">
+              <dl class="profile-info">
+                <dt>NAME</dt><dd data-edit="name">Luck</dd>
+                <dt>FULL NAME</dt><dd data-edit="fullName">Lilkit Limjinda</dd>
+                <dt>AGE</dt><dd data-edit="age">[EDIT ME]</dd>
+                <dt>PRONOUNS</dt><dd data-edit="pronouns">[EDIT ME]</dd>
+                <dt>GENDER</dt><dd data-edit="gender">[EDIT ME]</dd>
+                <dt>HEIGHT</dt><dd data-edit="height">[EDIT ME]</dd>
+                <dt>WEIGHT</dt><dd data-edit="weight">[EDIT ME]</dd>
+                <dt>STATUS</dt><dd data-edit="status">[EDIT ME]</dd>
+                <dt>MOOD</dt><dd data-edit="mood">[EDIT ME]</dd>
+                <dt>CURRENTLY</dt><dd data-edit="currentlyListening">[EDIT ME]</dd>
+                <dt>LIKES</dt><dd data-edit="likes">[EDIT ME]</dd>
+                <dt>DISLIKES</dt><dd data-edit="dislikes">[EDIT ME]</dd>
+                <dt>BIO</dt><dd data-edit="bio">[EDIT ME]</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIL (bonus small window opened from desktop icon) -->
+      <div id="window-mail" class="win" data-title="MAIL.EXE">
+        <div class="win-titlebar">
+          <span class="win-title">✉ MAIL.EXE</span>
+          <div class="win-controls">
+            <button class="win-btn min">_</button>
+            <button class="win-btn max">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <p class="mail-empty">📭 INBOX EMPTY.<br>...for now ♡</p>
+        </div>
+      </div>
+
+      <!-- STORYLINE.EXE -->
+      <div id="window-storyline" class="win" data-title="STORYLINE.EXE">
+        <div class="win-titlebar">
+          <span class="win-title">★ STORYLINE.EXE</span>
+          <div class="win-controls">
+            <button class="win-btn min">_</button>
+            <button class="win-btn max">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div id="storyline-timeline" class="timeline"></div>
+        </div>
+      </div>
+
+      <!-- TMI.EXE -->
+      <div id="window-tmi" class="win" data-title="TMI.EXE">
+        <div class="win-titlebar">
+          <span class="win-title">♧ TMI.EXE</span>
+          <div class="win-controls">
+            <button class="win-btn min">_</button>
+            <button class="win-btn max">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <div id="tmi-grid" class="tmi-grid"></div>
+        </div>
+      </div>
+
+      <!-- WARNING.EXE -->
+      <div id="window-warning" class="win warning-win" data-title="WARNING.EXE">
+        <div class="win-titlebar warning-titlebar">
+          <span class="win-title">⚠ WARNING.EXE</span>
+          <div class="win-controls">
+            <button class="win-btn min">_</button>
+            <button class="win-btn max">□</button>
+            <button class="win-btn close">×</button>
+          </div>
+        </div>
+        <div class="win-body">
+          <p class="warning-intro">This page contains themes that may be uncomfortable for some readers.</p>
+          <ul id="warning-list" class="warning-list"></ul>
+          <button id="warning-understand" class="pixel-btn">I UNDERSTAND</button>
+          <div id="warning-content" class="warning-content hidden">
+            <p>thanks for reading this far ♡ you can close this window now.</p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ============ MSN NOTIFICATION POPUP ============ -->
+    <div id="msn-popup" class="msn-popup hidden">
+      <div class="msn-popup-titlebar">
+        <span>♡ NEW MESSAGE</span>
+        <button id="msn-popup-close-x" class="win-btn close">×</button>
+      </div>
+      <div class="msn-popup-body">
+        <p class="msn-popup-from">Luck is online.</p>
+        <p id="msn-popup-text" class="msn-popup-text">"are you still here?"</p>
+        <div class="msn-popup-actions">
+          <button id="msn-popup-open" class="pixel-btn small">OPEN</button>
+          <button id="msn-popup-close" class="pixel-btn small">CLOSE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- easter egg toast -->
+    <div id="egg-toast" class="egg-toast hidden"></div>
+
+  </section>
+
+  <!-- CRT overlay -->
+  <div id="crt-overlay" class="crt-overlay" aria-hidden="true"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
